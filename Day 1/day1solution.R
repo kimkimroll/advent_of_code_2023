@@ -1,8 +1,6 @@
 library(dplyr)
-library(rvest)
 library(stringi)
 
-setwd("C:/Users/nvj5/OneDrive - CDC/adventofcode")
 
 dataraw <- read_document("day1.txt")
 data <- read_document("day1.txt") %>% as.data.frame()
