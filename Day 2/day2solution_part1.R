@@ -1,10 +1,13 @@
+### --- Load packages -------------------------------------
 library(dplyr)
 library(tidyr)
 library(stringr)
 library(stringi)
 
+### --- Load data -------------------------------------
 data <- read_document("day2.txt") %>% as.data.frame()
 
+### --- Calculations -------------------------------------
 table <- data %>%
   separate_wider_delim(data, cols = ., delim = ":", names = c("id", "match")) %>%
   mutate(game = stri_extract_first_regex(id, "[0-9]+")) %>%
@@ -32,5 +35,7 @@ table_check <- table %>%
 table_unique <- unique(table_check$game)
 
 answer  <- sum(table_unique)
-  
+ 
 answer
+
+### --- Answer: 2204 -------------------------------------
