@@ -1,5 +1,6 @@
 ### --- Load packages -------------------------------------
 library(dplyr)
+library(textreadr)
 library(tidyr)
 library(stringr)
 library(stringi)

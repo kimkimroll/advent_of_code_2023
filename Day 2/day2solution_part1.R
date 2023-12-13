@@ -1,11 +1,12 @@
 ### --- Load packages -------------------------------------
 library(dplyr)
+library(textreadr)
 library(tidyr)
 library(stringr)
 library(stringi)
 
 ### --- Load data -------------------------------------
-data <- read_document("day2.txt") %>% as.data.frame()
+data <- read_document("Day 2/day2.txt") %>% as.data.frame()
 
 ### --- Calculations -------------------------------------
 table <- data %>%
